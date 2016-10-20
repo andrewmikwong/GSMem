@@ -15,7 +15,7 @@
 #include "time.h"
 
 //500ms
-#define tx_time 500
+#define tx_time 2000
 
 //return time in ms since epoch
 long get_current_time(){
@@ -49,6 +49,7 @@ void GSMtransmit8(unsigned char c){
             clock_gettime(CLOCK_MONOTONIC, &spec);
             current_time=round(spec.tv_nsec/1.0e6)+spec.tv_sec*1000;
 */
+            printf("1\n");
             long start_time=get_current_time();
             while(tx_time>get_current_time()-start_time){
                //MOVNTDQ
@@ -58,10 +59,9 @@ void GSMtransmit8(unsigned char c){
                }
                buf=start;
             }
-            printf("1\n");
         } else{
-            usleep(tx_time*1000);
             printf("0\n");
+            usleep(tx_time*1000);
         }
         c>>=1;
         

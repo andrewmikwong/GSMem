@@ -1,0 +1,17 @@
+prim_pm.c dsp power measurements
+
+use prim_pm.c, schedule dsp measument at arfcn 1, and 2
+
+uncomment like 382 of 
+battery/compal_e88.c
+to reenable battery status display
+
+uncomment 406 of l23_api.c to print l1ctl_pm_req
+
+line 202 of layer1/sync.c
+
+layer1/prim.h`
+
+arfcn207 dl
+
+UUUUUUUUUUUUUUUUUU�WUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU
